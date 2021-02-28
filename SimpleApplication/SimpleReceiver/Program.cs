@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleReceiver
+﻿namespace SimpleReceiver
 {
     class Program
     {
         static void Main(string[] args)
         {
+            Receiver receiver = new Receiver();
+            receiver.Receive();
         }
     }
 }
