@@ -28,7 +28,7 @@ namespace SimpleReceiver
 
             //Создаем подписчика
             var consumer = new EventingBasicConsumer(channel);
-
+            //Подписываем его на событие полчения сообщения "Received"
             consumer.Received += (model, ea) =>
             {
                 var body = ea.Body;
@@ -36,7 +36,6 @@ namespace SimpleReceiver
                 Console.WriteLine(" [x] Доставлено {0}", message);
             };
 
-           
             channel.BasicConsume("hello", true, consumer);
 
             Console.WriteLine(" Нажмите [enter] для выхода.");
