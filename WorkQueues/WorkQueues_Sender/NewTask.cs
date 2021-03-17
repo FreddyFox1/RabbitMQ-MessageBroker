@@ -6,7 +6,7 @@ namespace WorkQueues_Task
 {
     public class NewTask
     {
-        public void Sender()
+        public void Sender(string[] args)
         {
             //Задаем имя хоста брокера сообщений
             var factory = new ConnectionFactory() { HostName = "localhost" };
@@ -19,7 +19,7 @@ namespace WorkQueues_Task
             //durable = true(в случае ошибки очередь будет сохранена)
             channel.QueueDeclare("task_queue", true, false,
                 false, null);
-            var args = Console.ReadLine();
+
             var message = GetMessage(args);
             var body = Encoding.UTF8.GetBytes(message);
 
