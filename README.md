@@ -1,4 +1,4 @@
-# Simple Aplication
+# Simple Application
 Клиент (Producer) отправляет сообщение -> Очередь их накапливает -> Получатель (Consumer) получает сообщения 
 
 # WorkQueues (Рабочие очереди)
